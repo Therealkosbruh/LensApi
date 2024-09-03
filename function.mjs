@@ -25,7 +25,7 @@ const getGoogleLensData = async (url) => {
             if (!site) {
               site = 'Unknown site';
             }
-
+            // При успешном выполнении добавляем результаты в отдельный массив
             results.push({
               link: element.link,
               image: element.thumbnail,
@@ -47,10 +47,5 @@ const getGoogleLensData = async (url) => {
     return null;
   }
 };
-export {getGoogleLensData}
 
-// Usage
-// const url = 'https://i.imgur.com/HBrB8p0.png';
-// const results = await getGoogleLensData(url);
-// console.log('Результаты:');
-// console.log(JSON.stringify(results, null, 2));
+export { getGoogleLensData };
